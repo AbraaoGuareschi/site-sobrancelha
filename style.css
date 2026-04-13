@@ -67,6 +67,9 @@ background: #b5a18f
   position: fixed;
   bottom: 20px;
   right: 20px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 25px;
   z-index: 999;
 }
 
