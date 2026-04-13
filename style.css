@@ -5,53 +5,34 @@ box-sizing:border-box;
 font-family:'Poppins', sans-serif;
 }
 
-body{
-
-color:#444;
-background:white;
-
+body {
+  background-image: url("fundo.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #6e6e6e;
 }
 
 /* LOGO NO FUNDO EMBAÇADA */
 
-body::before{
 
-content:"";
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-
-background-image:url("logo.png");
-background-size:600px;
-background-position:center;
-background-repeat:no-repeat;
-
-filter:blur(6px);
-opacity:0.15;
-
-z-index:-1;
-
-}
 
 /* HERO */
 
 .hero{
 
-height:100vh;
+height:60vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-
 }
 
 .hero h1{
 
 font-size:60px;
-color:#d46a92;
+color:#9c9c9c;
 margin-bottom:10px;
 
 }
@@ -67,7 +48,7 @@ margin-bottom:25px;
 
 .botao{
 
-background:#d46a92;
+background:#9c9c9c;
 color:white;
 padding:15px 30px;
 border-radius:30px;
@@ -79,8 +60,14 @@ transition:0.3s;
 
 .botao:hover{
 
-background:#b75479;
+background: #b5a18f
 
+}
+.botao {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
 }
 
 /* SERVIÇOS */
@@ -89,30 +76,35 @@ background:#b75479;
 
 padding:80px 20px;
 text-align:center;
-background:white;
+background:transparent;
 
 }
 
 .servicos h2{
 
 font-size:40px;
-color:#d46a92;
+color:#9c9c9c;
 margin-bottom:40px;
 
 }
+.servicos, .galeria {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  margin: 20px;
+}
 
-.cards{
-
-display:flex;
-justify-content:center;
-gap:30px;
-flex-wrap:wrap;
-
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
 }
 
 .card{
 
-background:#ffe6ef;
+background:#f5efe6;
 padding:30px;
 width:250px;
 border-radius:12px;
@@ -122,9 +114,16 @@ box-shadow:0 5px 10px rgba(0,0,0,0.08);
 
 .card h3{
 
-color:#d46a92;
+color:#9c9c9c;
 margin-bottom:10px;
 
+}
+.card {
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 /* GALERIA */
@@ -139,7 +138,7 @@ text-align:center;
 .galeria h2{
 
 font-size:40px;
-color:#d46a92;
+color:#9c9c9c;
 margin-bottom:40px;
 
 }
@@ -153,12 +152,11 @@ flex-wrap:wrap;
 
 }
 
-.fotos img{
-
-width:300px;
-border-radius:12px;
-box-shadow:0 5px 10px rgba(0,0,0,0.15);
-
+.fotos img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 /* RODAPÉ */
@@ -167,20 +165,27 @@ footer{
 
 text-align:center;
 padding:20px;
-background:#ffe6ef;
+background:#e8dccd;
 
 }
 .sobrancelhaKamilly{
 width: 300px;
-height:290px;
+height: 300px;
 object-fit:cover;
-border: radius 100%;;
-object-position:center 35%;
+border-radius: 50%;;
+object-position:center 50%;
 }
 
 .sobrancelhaYasmin{
 width:300px;
-height:290px;
+height:auto;
+object-fit:cover;
+border-radius:50%;
+object-position:center 40%;
+}
+.sobrancelhaAbraao{
+width:300px;
+height:auto;
 object-fit:cover;
 border-radius:50%;
 object-position:center 40%;
